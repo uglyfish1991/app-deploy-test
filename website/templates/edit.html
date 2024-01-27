@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    Current task {{todo.task}}
+    <form action="/edit/{{ todo.id }}" method="post">
+        <div>
+            <label>Todo task</label>
+            <input type="text" name="editted_task" placeholder="Enter a Task">
+            <button type="submit">Update the Task</button>
+        </div>
+    </form>
+{% endblock%}

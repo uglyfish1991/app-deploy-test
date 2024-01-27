@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+    <div>
+        <h1>To Do List</h1>
+
+        {% if message %}
+        <p class="{{mes_type}}">{{message}}</p>
+        {% endif %}
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+
+</html>
